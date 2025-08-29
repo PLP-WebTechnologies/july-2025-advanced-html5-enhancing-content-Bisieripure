@@ -1,174 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Enhanced HTML5 Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
+      margin: 2em;
+      background-color: #f9f9f9;
     }
-    header, footer {
-      background: #f4f4f4;
-      padding: 10px;
-    }
-    main {
-      margin-top: 20px;
+    header, main, footer {
+      max-width: 800px;
+      margin: auto;
     }
     form {
-      max-width: 600px;
-      background: #fafafa;
-      padding: 15px;
-      border: 1px solid #ccc;
+      background: #fff;
+      padding: 1.5em;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      padding: 1em;
+    }
+    legend {
+      font-weight: bold;
     }
     label {
       display: block;
-      margin-top: 10px;
+      margin-top: 0.5em;
     }
-    input, select, textarea, button {
+    input, select, textarea {
       width: 100%;
-      padding: 8px;
-      margin-top: 4px;
+      padding: 0.5em;
+      margin-top: 0.2em;
+      box-sizing: border-box;
     }
     table {
-      border-collapse: collapse;
       width: 100%;
-      margin-top: 20px;
+      border-collapse: collapse;
+      margin-top: 1em;
     }
-    table, th, td {
+    th, td {
       border: 1px solid #ccc;
-      padding: 8px;
+      padding: 0.5em;
+      text-align: left;
+    }
+    ul {
+      margin-top: 1em;
     }
     img {
       max-width: 100%;
+      height: auto;
+      margin-top: 1em;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Enhanced HTML5 Form Example</h1>
-    <p>This page demonstrates semantic HTML, form validation, media elements, tables, and lists.</p>
+    <h1>Enhanced HTML5 Form</h1>
+    <p>This page demonstrates a well-structured HTML5 form with semantic layout, validation, and multimedia elements.</p>
   </header>
 
   <main>
-    <section aria-labelledby="form-section">
-      <h2 id="form-section">User Registration Form</h2>
-      <form action="/submit" method="post" autocomplete="on" novalidate>
-        
-        <!-- Personal Info -->
-        <label for="fullname">Full Name *</label>
-        <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
-
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="jane@example.com" required>
-
-        <label for="password">Password *</label>
-        <input type="password" id="password" name="password" minlength="6" required>
-
-        <label for="dob">Date of Birth</label>
-        <input type="date" id="dob" name="dob">
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-
-        <!-- Preferences -->
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="">-- Select a country --</option>
-          <option value="us">United States</option>
-          <option value="uk">United Kingdom</option>
-          <option value="ca">Canada</option>
-        </select>
-
-        <label>
-          <input type="checkbox" name="subscribe" checked>
-          Subscribe to newsletter
-        </label>
-
-        <label>Gender</label>
-        <label><input type="radio" name="gender" value="female"> Female</label>
-        <label><input type="radio" name="gender" value="male"> Male</label>
-        <label><input type="radio" name="gender" value="other"> Other</label>
-
-        <label for="bio">Short Bio</label>
-        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
-
-        <!-- Readonly Example -->
-        <label for="referral">Referral Code</label>
-        <input type="text" id="referral" name="referral" value="REF12345" readonly>
-
-        <button type="submit">Submit</button>
-      </form>
+    <section>
+      <h2>Features Overview</h2>
+      <ul>
+        <li>Semantic HTML layout</li>
+        <li>Form with diverse input types</li>
+        <li>HTML5 validation and accessibility</li>
+        <li>Tables and media integration</li>
+      </ul>
     </section>
 
-    <section aria-labelledby="info-section">
-      <h2 id="info-section">Additional Information</h2>
-
-      <!-- List -->
-      <h3>Benefits of Registering:</h3>
-      <ul>
-        <li>Access to exclusive content</li>
-        <li>Monthly newsletters</li>
-        <li>Free downloadable resources</li>
-      </ul>
-
-      <!-- Table -->
-      <h3>Pricing Table</h3>
+    <section>
+      <h2>Sample Data Table</h2>
       <table>
         <thead>
           <tr>
-            <th>Plan</th>
-            <th>Price</th>
-            <th>Features</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Email</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Basic</td>
-            <td>$0</td>
-            <td>Access to free articles</td>
+            <td>Aiko Tanaka</td>
+            <td>Designer</td>
+            <td>aiko@example.com</td>
           </tr>
           <tr>
-            <td>Pro</td>
-            <td>$9.99/mo</td>
-            <td>Premium content & support</td>
-          </tr>
-          <tr>
-            <td>Enterprise</td>
-            <td>$29.99/mo</td>
-            <td>Team access & analytics</td>
+            <td>James Mwangi</td>
+            <td>Developer</td>
+            <td>james@example.com</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <!-- Media Section -->
-    <section aria-labelledby="media-section">
-      <h2 id="media-section">Media Samples</h2>
-      <figure>
-        <img src="https://via.placeholder.com/600x200" alt="Sample Banner">
-        <figcaption>Sample image for layout demonstration</figcaption>
-      </figure>
-
-      <audio controls>
-        <source src="sample-audio.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-
-      <video controls width="100%" height="auto">
-        <source src="sample-video.mp4" type="video/mp4">
-        Your browser does not support the video element.
+    <section>
+      <h2>Embedded Media</h2>
+      <img src="https://via.placeholder.com/600x200?text=Sample+Banner" alt="Sample banner image" />
+      <p>Below is a sample video embedded using HTML5:</p>
+      <video controls width="100%">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
+    </section>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="/submit" method="POST" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">--Select--</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Details</legend>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="4" maxlength="15" />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6" />
+
+          <label for="confirm">Confirm Password:</label>
+          <input type="password" id="confirm" name="confirm" required minlength="6" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+
+          <label for="newsletter">Subscribe to newsletter:</label>
+          <input type="checkbox" id="newsletter" name="newsletter" />
+
+          <label for="readonly-info">Referral Code (readonly):</label>
+          <input type="text" id="readonly-info" name="referral" value="REF12345" readonly />
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Enhanced Form Demo. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
+
