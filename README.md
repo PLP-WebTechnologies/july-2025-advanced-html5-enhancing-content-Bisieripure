@@ -1,43 +1,174 @@
-# 📘 Assignment: Enhancing HTML5 Content & Mastering Forms
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, footer {
+      background: #f4f4f4;
+      padding: 10px;
+    }
+    main {
+      margin-top: 20px;
+    }
+    form {
+      max-width: 600px;
+      background: #fafafa;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
 
-## Overview
+  <header>
+    <h1>Enhanced HTML5 Form Example</h1>
+    <p>This page demonstrates semantic HTML, form validation, media elements, tables, and lists.</p>
+  </header>
 
-This assignment focuses on elevating your HTML5 skills by working with advanced content elements and mastering the creation, structure, and validation of web forms. You will practice using lists, tables, and media to enrich page content, and then dive deep into building dynamic, user-friendly forms powered by native HTML5 features.
+  <main>
+    <section aria-labelledby="form-section">
+      <h2 id="form-section">User Registration Form</h2>
+      <form action="/submit" method="post" autocomplete="on" novalidate>
+        
+        <!-- Personal Info -->
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
 
-## Objectives
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required>
 
-You are expected to demonstrate the ability to:
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" minlength="6" required>
 
-* Use lists and tables effectively to organize content for clarity and accessibility.
-* Embed media content such as images, audio, or video using semantic HTML5 elements.
-* Build structured HTML5 forms that are both usable and visually intuitive.
-* Apply various HTML5 form attributes to improve user interaction.
-* Use built-in validation techniques to minimize incorrect data input without relying on JavaScript.
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
 
-## Instructions
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
 
-Design a simple multi-section web page that showcases the use of lists, tables, and media, followed by a complete HTML5 form. The page should reflect thoughtful structure, usability, and clarity.
+        <!-- Preferences -->
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="">-- Select a country --</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="ca">Canada</option>
+        </select>
 
-Your form should include various input types, make use of labels and fieldsets for accessibility, and apply HTML5 validation rules through attributes like `required`, `type`, `minlength`, `pattern`, and others.
+        <label>
+          <input type="checkbox" name="subscribe" checked>
+          Subscribe to newsletter
+        </label>
 
-Avoid using JavaScript for validation—rely solely on native HTML5 capabilities.
+        <label>Gender</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
 
-## Deliverables
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
 
-Submit a single HTML file named `enhanced-form.html`. It should include:
+        <!-- Readonly Example -->
+        <label for="referral">Referral Code</label>
+        <input type="text" id="referral" name="referral" value="REF12345" readonly>
 
-* Well-structured content using lists, tables, and media.
-* A complete HTML5 form including a variety of input fields.
-* Correct use of form attributes such as `placeholder`, `required`, `autocomplete`, and `readonly`.
-* HTML5 validation features implemented correctly across all relevant fields.
-* A clear, accessible layout using semantic tags.
+        <button type="submit">Submit</button>
+      </form>
+    </section>
 
-## Tips
+    <section aria-labelledby="info-section">
+      <h2 id="info-section">Additional Information</h2>
 
-* Proper and meaningful use of lists, tables, and media.
-* Clarity and accessibility of form structure.
-* Correct use of form elements and attributes.
-* Effective application of native HTML5 validation.
-* Clean, well-indented, and maintainable HTML code.
+      <!-- List -->
+      <h3>Benefits of Registering:</h3>
+      <ul>
+        <li>Access to exclusive content</li>
+        <li>Monthly newsletters</li>
+        <li>Free downloadable resources</li>
+      </ul>
 
+      <!-- Table -->
+      <h3>Pricing Table</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Price</th>
+            <th>Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>$0</td>
+            <td>Access to free articles</td>
+          </tr>
+          <tr>
+            <td>Pro</td>
+            <td>$9.99/mo</td>
+            <td>Premium content & support</td>
+          </tr>
+          <tr>
+            <td>Enterprise</td>
+            <td>$29.99/mo</td>
+            <td>Team access & analytics</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
+    <!-- Media Section -->
+    <section aria-labelledby="media-section">
+      <h2 id="media-section">Media Samples</h2>
+      <figure>
+        <img src="https://via.placeholder.com/600x200" alt="Sample Banner">
+        <figcaption>Sample image for layout demonstration</figcaption>
+      </figure>
+
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <video controls width="100%" height="auto">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Demo. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
